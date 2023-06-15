@@ -5,6 +5,6 @@ export function createExpense(json) {
     return new Expense(
         json.title,
         Number(json.price),
-        String(json.date)
+        new Date(json.date).toISOString()
     );
 }
